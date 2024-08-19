@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Using POST method</title>
+</head>
+<body>
+    <h1>POST Request</h1>
+    <form action="http://localhost:5002/recommend" method="POST">
+        <label for="viewerid">PLEASE ENTER ONLY THE VIEWER ID:</label>
+        <input type="text" id="viewerid" name="viewerid" required>
+        <input type="submit" value="Send Request">
+    </form>
+
+    <h2>Try Again</h2>
+    <form action="http://localhost:5002" method="GET">
+        <input type="submit" value="Go Back">
+    </form>
+</body>
+</html>

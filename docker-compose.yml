@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+  
+  generator:
+    build:
+      context: C:/Users/monte/Desktop/Krisp Assosiate Data Engineer/Recommendation Project. Krisp Data Engineer/Generator
+      dockerfile: Dockerfile
+    image: montesh1996/generator:1.0
+    ports:
+      - 5001:5001
+
+  invoker:
+    build:
+        context: C:/Users/monte\Desktop\Krisp Assosiate Data Engineer\Recommendation Project. Krisp Data Engineer\Invoker
+        dockerfile: Dockerfile
+    image: montesh1996/invoker:1.0
+    ports:
+        - 5002:5002
+    depends_on:
+        - redis
+        - generator
+    volumes:
+      - ./static:/app/static
