@@ -19,6 +19,7 @@ It performs the following tasks:
             "result": <RANDOMNUMBER>
           }
 
+
 2. Invoker Service. Invoker Service is the service between client and Generator, here Invoker manages data caching, both locally and with Redis.
 Invoker Service performs the following tasks.
   1. It can receive requests for recommendation through a POST endpoint.
