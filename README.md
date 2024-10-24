@@ -1,10 +1,7 @@
-# Krisp-Recommendation-Services
-Krisp-Recommendation-Services. 
-
-
+Recommendation-Services-Generator / Data Engineer vacancy
 
 This Project has 2 main services ` Generator and Invoker. 
-Project is tested with different tools, including terminals, POST and GET methods,in browser and Postman. The app handles local and Redis caches, TTL of 10 seconds and 3 key, as project requires. 
+Project is tested with different tools, including terminals, POST and GET methods,in browser and Postman. The app handles local and Redis caches, TTL of 10 seconds and limited to 3 keys, as project requires. 
 
 1. Generator. Generator Service generates recommendations based on the viewer ID and the model name provided in the request. It produce an output in JSON format.
    
@@ -40,11 +37,10 @@ The docker-compose.yml file defines the services, networks, and volumes needed f
 
 To Deploy the project Docker, please follow the steps below
 
-1. Do a git clone of the project -> https://github.com/MonteShahmuradyan/Krisp-Recommendation-Services.git
-   and move forward to the path of the file on terminal.
+1. Do a git clone of the project -> https://github.com/MonteShahmuradyan/Recommendation-Services-Generator.git and move forward to the path of the file on terminal.
 2. Pull all images described in the project`s docker-compose file from  previous step in docker desktop into one container under 1 network using -> docker-compose up -d
-3. Third step, run -> docker-compose up --build  , first step` docker-compose --build, second step docker-compose up... But "docker-compose up --build" is running together.
+3. Third step, run -> docker-compose up --build , first step` docker-compose --build, second step docker-compose up... But "docker-compose up --build" is running together.
 4. Verify that all images are running -> docker-compose ps
-5. Can test the application and check for the desired updated.
+5. Can test the application and check for the desired updates.
 6. Make sure to use -> docker-compose down after completing the usage of the application.
 7. Optional: docker system prune: To clean all the memory that dockerized application used.
